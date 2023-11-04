@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @byjeetrathod2k3
+- 👋 Hi, I’m @byjeetrathod2k3 on Git 
 - 👀 I’m interested in Devloping as well as designing
 - 🌱 I’m currently learning Flutter And UI Designing
 - 📫 How to reach me connect with me on instagrame jeet_rathod_2k3
