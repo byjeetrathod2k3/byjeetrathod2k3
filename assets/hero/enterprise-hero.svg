@@ -1,104 +1,165 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="380">
   <defs>
-    <!-- Background Gradients -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#040711" />
-      <stop offset="40%" stop-color="#080D1A" />
-      <stop offset="85%" stop-color="#0B1A30" />
-      <stop offset="100%" stop-color="#0879C9" stop-opacity="0.25" />
+    <!-- 3D Depth Gradients -->
+    <linearGradient id="bg3d" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#03060C" />
+      <stop offset="45%" stop-color="#071120" />
+      <stop offset="85%" stop-color="#0C213B" />
+      <stop offset="100%" stop-color="#0879C9" stop-opacity="0.35" />
     </linearGradient>
 
-    <linearGradient id="techBorderGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#278CEB" stop-opacity="0" />
-      <stop offset="30%" stop-color="#278CEB" stop-opacity="0.8" />
-      <stop offset="70%" stop-color="#55B9FF" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#0879C9" stop-opacity="0" />
+    <linearGradient id="cubeTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#55B9FF" />
+      <stop offset="100%" stop-color="#0879C9" />
     </linearGradient>
 
-    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="cubeLeft" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#278CEB" />
+      <stop offset="100%" stop-color="#0A2540" />
+    </linearGradient>
+
+    <linearGradient id="cubeRight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0879C9" />
+      <stop offset="100%" stop-color="#051324" />
+    </linearGradient>
+
+    <linearGradient id="title3d" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="60%" stop-color="#E2F1FF" />
+      <stop offset="65%" stop-color="#D4ECFF" />
       <stop offset="100%" stop-color="#55B9FF" />
     </linearGradient>
 
-    <pattern id="dotGrid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="#55B9FF" fill-opacity="0.08" />
+    <filter id="glow3d" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <pattern id="isoGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 20 L 40 40 L 80 20 Z" fill="none" stroke="#55B9FF" stroke-width="0.6" stroke-opacity="0.07" />
     </pattern>
 
     <style>
-      .mono-txt { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
-      .sans-txt { font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif; }
-      @keyframes radarSweep {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+      .sans-3d { font-family: 'Space Grotesk', 'Inter', 'Segoe UI', sans-serif; }
+      .mono-3d { font-family: 'JetBrains Mono', 'Fira Code', monospace; }
+      @keyframes floatUpper {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-14px); }
       }
-      @keyframes pulseGlow {
-        0%, 100% { opacity: 0.3; }
-        50% { opacity: 0.7; }
+      @keyframes floatMiddle {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-7px); }
       }
-      @keyframes dashMove {
-        to { stroke-dashoffset: -40; }
+      @keyframes floatLower {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(5px); }
       }
-      .circuit-line {
-        stroke-dasharray: 6 14;
-        animation: dashMove 2.5s linear infinite;
+      @keyframes dataFlow {
+        to { stroke-dashoffset: -60; }
       }
-      .beacon-ring {
-        animation: pulseGlow 3s ease-in-out infinite;
+      @keyframes orbitPulse {
+        0%, 100% { opacity: 0.25; transform: scale(0.98); }
+        50% { opacity: 0.85; transform: scale(1.03); }
       }
+      .layer-top { animation: floatUpper 4s ease-in-out infinite; }
+      .layer-mid { animation: floatMiddle 4s ease-in-out infinite; }
+      .layer-bot { animation: floatLower 4s ease-in-out infinite; }
+      .stream-line { stroke-dasharray: 8 12; animation: dataFlow 2s linear infinite; }
     </style>
   </defs>
 
-  <!-- Canvas Surface -->
-  <rect width="1200" height="360" rx="14" fill="url(#bgGrad)" stroke="#102A46" stroke-width="1.5" />
-  <rect width="1200" height="360" rx="14" fill="url(#dotGrid)" />
+  <!-- 3D Viewport Chassis -->
+  <rect width="1200" height="380" rx="16" fill="url(#bg3d)" stroke="#1B3B5F" stroke-width="2" />
+  <rect width="1200" height="380" rx="16" fill="url(#isoGrid)" />
 
-  <!-- Technical Circuit Topography Overlay -->
-  <g opacity="0.35">
-    <path d="M 0 180 L 320 180 L 380 240 L 720 240 L 760 200 L 1200 200" fill="none" stroke="#278CEB" stroke-width="1" class="circuit-line" />
-    <path d="M 120 0 L 120 90 L 180 150 L 540 150" fill="none" stroke="#55B9FF" stroke-width="0.8" opacity="0.5" />
-    <circle cx="380" cy="240" r="3" fill="#55B9FF" />
-    <circle cx="760" cy="200" r="3" fill="#278CEB" />
-    <circle cx="180" cy="150" r="2.5" fill="#55B9FF" />
+  <!-- Glowing 3D Floor Horizon -->
+  <path d="M 0 310 Q 600 260 1200 310 L 1200 380 L 0 380 Z" fill="#0879C9" opacity="0.07" />
+  <path d="M 0 310 Q 600 260 1200 310" fill="none" stroke="#278CEB" stroke-width="1.5" opacity="0.4" class="stream-line" />
+
+  <!-- Animated 3D Data Streams -->
+  <g opacity="0.45">
+    <path d="M 650 260 L 780 260 L 850 190 L 980 190" fill="none" stroke="#55B9FF" stroke-width="1.5" class="stream-line" />
+    <path d="M 700 120 L 820 120 L 890 190" fill="none" stroke="#278CEB" stroke-width="1.2" class="stream-line" />
+    <circle cx="850" cy="190" r="4" fill="#55B9FF" filter="url(#glow3d)" />
+    <circle cx="700" cy="120" r="3" fill="#55B9FF" />
   </g>
 
-  <!-- Right Geometric Radar / Engineering Reticle -->
-  <g transform="translate(1000, 180)">
-    <circle cx="0" cy="0" r="110" fill="none" stroke="#102A46" stroke-width="1" />
-    <circle cx="0" cy="0" r="80" fill="none" stroke="#278CEB" stroke-width="1" opacity="0.4" stroke-dasharray="8 6" />
-    <circle cx="0" cy="0" r="45" fill="none" stroke="#55B9FF" stroke-width="1.2" class="beacon-ring" />
-    <line x1="-120" y1="0" x2="120" y2="0" stroke="#102A46" stroke-width="1" />
-    <line x1="0" y1="-120" x2="0" y2="120" stroke="#102A46" stroke-width="1" />
-    <circle cx="0" cy="0" r="3" fill="#55B9FF" />
-    <text x="50" y="-85" fill="#55B9FF" font-size="10" opacity="0.7" class="mono-txt">SYS_ARCH::2026</text>
+  <!-- ========================================================= -->
+  <!-- RIGHT SIDE: ANIMATED 3D ISOMETRIC ENTERPRISE ARCHITECTURE -->
+  <!-- ========================================================= -->
+  <g transform="translate(990, 195)">
+    <!-- 3D Base Shadow Pedestal -->
+    <polygon points="0,115 -110,60 0,5 110,60" fill="#030710" opacity="0.8" />
+    <polygon points="0,110 -95,60 0,10 95,60" fill="none" stroke="#278CEB" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.6" />
+
+    <!-- 3D Bottom Infrastructure Layer (Database & SQL Core) -->
+    <g class="layer-bot">
+      <!-- Top Face -->
+      <polygon points="0,45 -80,5 0,-35 80,5" fill="url(#cubeTop)" opacity="0.85" />
+      <!-- Left Face -->
+      <polygon points="-80,5 0,45 0,75 -80,35" fill="url(#cubeLeft)" />
+      <!-- Right Face -->
+      <polygon points="80,5 0,45 0,75 80,35" fill="url(#cubeRight)" />
+      <polyline points="-80,5 0,45 80,5" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.5" />
+    </g>
+
+    <!-- 3D Middle Application Layer (ERP / CRM / MES Engine) -->
+    <g class="layer-mid" transform="translate(0, -42)">
+      <!-- Top Face -->
+      <polygon points="0,45 -80,5 0,-35 80,5" fill="url(#cubeTop)" opacity="0.9" />
+      <!-- Left Face -->
+      <polygon points="-80,5 0,45 0,72 -80,32" fill="url(#cubeLeft)" />
+      <!-- Right Face -->
+      <polygon points="80,5 0,45 0,72 80,32" fill="url(#cubeRight)" />
+      <polyline points="-80,5 0,45 80,5" fill="none" stroke="#FFFFFF" stroke-width="1.2" opacity="0.7" />
+    </g>
+
+    <!-- 3D Upper Intelligence Layer (AI & BI Telemetry Node) -->
+    <g class="layer-top" transform="translate(0, -88)">
+      <!-- Glowing Core Cube -->
+      <polygon points="0,25 -55,-2 0,-30 55,-2" fill="#55B9FF" filter="url(#glow3d)" opacity="0.4" />
+      <polygon points="0,25 -50,0 0,-25 50,0" fill="url(#cubeTop)" />
+      <polygon points="-50,0 0,25 0,55 -50,30" fill="url(#cubeLeft)" />
+      <polygon points="50,0 0,25 0,55 50,30" fill="url(#cubeRight)" />
+      <polyline points="-50,0 0,25 50,0" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.9" />
+      <circle cx="0" cy="0" r="4" fill="#FFFFFF" filter="url(#glow3d)" />
+    </g>
+
+    <!-- 3D HUD Callout Labels -->
+    <text x="-135" y="-95" fill="#55B9FF" font-size="10" class="mono-3d">[AI · BI · SAAS]</text>
+    <text x="88" y="-15" fill="#278CEB" font-size="10" class="mono-3d">[ERP · CRM · MES]</text>
+    <text x="-145" y="55" fill="#8EA9C7" font-size="10" class="mono-3d">[SQL · DATA CORE]</text>
   </g>
 
-  <!-- Status Chip -->
-  <g transform="translate(70, 52)">
-    <rect width="215" height="26" rx="6" fill="#0D1728" stroke="#278CEB" stroke-width="1" stroke-opacity="0.6" />
-    <circle cx="14" cy="13" r="4" fill="#55B9FF">
-      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+  <!-- ========================================================= -->
+  <!-- LEFT SIDE: EXECUTIVE TYPOGRAPHY & 3D CHASSIS              -->
+  <!-- ========================================================= -->
+
+  <!-- 3D Status Pill -->
+  <g transform="translate(68, 48)">
+    <rect width="275" height="28" rx="6" fill="#071324" stroke="#278CEB" stroke-width="1.2" />
+    <circle cx="16" cy="14" r="4.5" fill="#55B9FF" filter="url(#glow3d)">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite" />
     </circle>
-    <text x="26" y="17" fill="#55B9FF" font-size="11" font-weight="600" letter-spacing="1.2" class="mono-txt">ENTERPRISE SOLUTIONS</text>
+    <text x="30" y="18" fill="#55B9FF" font-size="11" font-weight="700" letter-spacing="1.5" class="mono-3d">ENTERPRISE ARCHITECTURE</text>
   </g>
 
-  <!-- Primary Identity Typography -->
-  <text x="70" y="145" fill="url(#textGrad)" font-size="62" font-weight="800" letter-spacing="-1.2" class="sans-txt">JEET RATHOD</text>
+  <!-- 3D Extruded Main Title -->
+  <text x="71" y="148" fill="#041022" font-size="66" font-weight="900" letter-spacing="-1" class="sans-3d">JEET RATHOD</text>
+  <text x="68" y="145" fill="url(#title3d)" font-size="66" font-weight="900" letter-spacing="-1" class="sans-3d">JEET RATHOD</text>
 
-  <!-- Subtitle Matrix -->
-  <text x="72" y="185" fill="#8EA9C7" font-size="15" font-weight="500" letter-spacing="2.2" class="mono-txt">SOFTWARE DEVELOPER  |  SOLUTIONS ADVISOR  |  CONSULTANT</text>
+  <!-- Role Subtitle -->
+  <text x="70" y="185" fill="#55B9FF" font-size="14.5" font-weight="600" letter-spacing="2.2" class="mono-3d">SOFTWARE ENGINEER  |  ENTERPRISE SOLUTIONS ADVISOR</text>
 
-  <!-- Technical Divider Line -->
-  <rect x="70" y="215" width="840" height="1.5" fill="url(#techBorderGrad)" />
+  <!-- Glowing 3D Divider Bar -->
+  <rect x="68" y="208" width="680" height="2.5" rx="1" fill="url(#cubeTop)" />
 
-  <!-- Strategic Value Proposition -->
-  <g transform="translate(72, 252)">
-    <text x="0" y="0" fill="#E2F1FF" font-size="15" font-weight="500" class="sans-txt">Bridging enterprise operations and resilient system architecture.</text>
-    <text x="0" y="24" fill="#55B9FF" font-size="13" font-weight="400" class="mono-txt">ERP/CRM/MES Engines  ·  Data Architecture  ·  Full-Stack Platforms  ·  Process Automation</text>
-  </g>
+  <!-- Executive Positioning Statement -->
+  <text x="70" y="245" fill="#FFFFFF" font-size="16" font-weight="600" class="sans-3d">Engineering Resilient Technology. Enabling Scalable Business Operations.</text>
+  <text x="70" y="272" fill="#94B2D3" font-size="13.5" class="mono-3d">ERP · CRM · MES Systems  |  T-SQL & Data Pipelines  |  Power BI & Automation</text>
 
-  <!-- Terminal Telemetry Pill -->
-  <g transform="translate(70, 308)">
-    <text x="0" y="0" fill="#4B6A90" font-size="11" class="mono-txt">LOC: AHMEDABAD, IN  |  ORG: CYPRAON PRIVATE LIMITED  |  ENV: PRODUCTION</text>
+  <!-- Bottom 3D Telemetry Deck -->
+  <g transform="translate(68, 305)">
+    <rect width="580" height="34" rx="6" fill="#050C18" stroke="#142E4D" stroke-width="1" />
+    <text x="16" y="21" fill="#55B9FF" font-size="11.5" class="mono-3d">ORG: CYPRAON PRIVATE LIMITED   ·   STATUS: PRODUCTION READY   ·   LOC: IN</text>
   </g>
 </svg>
