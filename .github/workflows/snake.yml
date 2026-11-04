@@ -1,41 +1,63 @@
-name: Generate Contribution Snake Animation
+# Generates the contribution snake and publishes it to the `output` branch.
+#
+# Output files (referenced by README.md):
+#   output:github-contribution-grid-snake.svg       (light)
+#   output:github-contribution-grid-snake-dark.svg  (dark)
+#
+# Troubleshooting
+#   - Push rejected (403): Settings > Actions > General > Workflow permissions
+#     must allow "Read and write permissions".
+#   - README image is broken: run the workflow once manually (Actions tab >
+#     "Generate contribution snake" > Run workflow), then confirm the `output`
+#     branch exists and contains both SVG files.
+#   - Snake looks stale: raw.githubusercontent.com caches for a few minutes.
+#   - Generation step fails: check the Platane/snk release notes for changes.
+#   - Scheduled runs pause after 60 days of repository inactivity; re-enable
+#     the workflow from the Actions tab if that happens.
+name: Generate contribution snake
 
 on:
   schedule:
-    # Run automatically every 12 hours
-    - cron: "0 */12 * * *"
+    - cron: "17 */12 * * *"
   workflow_dispatch:
   push:
-    branches:
-      - main
+    branches: [main]
+    paths: [".github/workflows/snake.yml"]
 
 permissions:
   contents: write
 
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
 jobs:
-  build:
+  generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
-
+    timeout-minutes: 10
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Generate Contribution Snake SVGs
+      - name: Build snake SVGs
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: byjeetrathod2k3
+          github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake.svg?color_snake=#55B9FF&color_dots=#161B22,#0D419D,#005FB8,#278CEB,#55B9FF
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#55B9FF&color_dots=#161B22,#0E2D58,#124984,#278CEB,#55B9FF
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      - name: Deploy to Output Branch
+      - name: Check outputs exist
         run: |
-          cd dist
-          git init
+          test -s dist/github-contribution-grid-snake.svg
+          test -s dist/github-contribution-grid-snake-dark.svg
+
+      - name: Publish to output branch
+        working-directory: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git init -b output
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git checkout -B output
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
-          git commit -m "Update contribution snake animation [skip ci]"
-          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git output
+          git commit -m "Update contribution snake"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin output
