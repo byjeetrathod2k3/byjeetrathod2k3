@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="100%" height="120">
+  <defs>
+    <linearGradient id="projBg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08101E" />
+      <stop offset="100%" stop-color="#0E233D" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="120" rx="10" fill="url(#projBg3)" stroke="#1F4770" stroke-width="1.2" />
+  <text x="24" y="38" fill="#55B9FF" font-family="&#39;JetBrains Mono&#39;, monospace" font-size="11" font-weight="600" letter-spacing="1.5">03 // COMMERCE INFRASTRUCTURE</text>
+  <text x="24" y="68" fill="#FFFFFF" font-family="&#39;Space Grotesk&#39;, sans-serif" font-size="20" font-weight="700">TOWNTAP</text>
+  <text x="24" y="90" fill="#8EA9C7" font-family="&#39;Space Grotesk&#39;, sans-serif" font-size="12">Local Services Discovery & Unified Commerce</text>
+  <circle cx="360" cy="35" r="4" fill="#278CEB" />
+  <circle cx="360" cy="35" r="9" fill="none" stroke="#278CEB" stroke-width="1" opacity="0.5" />
+</svg>
