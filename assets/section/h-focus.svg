@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 56" width="860" height="56" role="img" aria-labelledby="t d">
+<title id="t">Current focus</title>
+<desc id="d">Section heading: Current focus</desc>
+<defs><linearGradient id="ln" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#278CEB"/><stop offset="1" stop-color="#278CEB" stop-opacity="0"/></linearGradient></defs>
+<rect width="860" height="56" rx="4" fill="#0D1728"/>
+<rect x="0" y="0" width="4" height="56" fill="#278CEB"/>
+<text x="26" y="35" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="600" fill="#E6EEF8">Current focus</text>
+<rect x="4" y="53" width="856" height="1.5" fill="url(#ln)" opacity=".7"/>
+<rect x="4" y="52.5" width="70" height="2.5" fill="#55B9FF" opacity=".9"><animate attributeName="x" values="4;786;4" dur="9s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;.9;0" dur="9s" repeatCount="indefinite"/></rect>
+</svg>
