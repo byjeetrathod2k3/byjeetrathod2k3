@@ -171,17 +171,17 @@ These are product initiatives I am developing. Repository and demo links will be
 <table>
 <tr>
 <td width="50%" align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=byjeetrathod2k3&show_icons=true&bg_color=0D1728&title_color=55B9FF&text_color=C9D6E6&icon_color=278CEB&ring_color=278CEB&border_color=102A46&hide_border=false" alt="GitHub statistics for byjeetrathod2k3" width="100%">
+<img src="https://raw.githubusercontent.com/byjeetrathod2k3/byjeetrathod2k3/stats/stats-overview.svg" alt="GitHub statistics for byjeetrathod2k3" width="100%">
 </td>
 <td width="50%" align="center">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=byjeetrathod2k3&layout=compact&langs_count=8&bg_color=0D1728&title_color=55B9FF&text_color=C9D6E6&border_color=102A46&hide_border=false" alt="Most used languages for byjeetrathod2k3" width="100%">
+<img src="https://raw.githubusercontent.com/byjeetrathod2k3/byjeetrathod2k3/stats/languages.svg" alt="Most used languages for byjeetrathod2k3" width="100%">
 </td>
 </tr>
 </table>
 
-<img src="https://streak-stats.demolab.com/?user=byjeetrathod2k3&background=0D1728&border=102A46&stroke=102A46&ring=278CEB&fire=55B9FF&currStreakNum=E6EEF8&currStreakLabel=55B9FF&sideNums=E6EEF8&sideLabels=8FA6BF&dates=8FA6BF" alt="Contribution streak for byjeetrathod2k3" width="100%">
+<img src="https://raw.githubusercontent.com/byjeetrathod2k3/byjeetrathod2k3/stats/streak.svg" alt="Contribution streak for byjeetrathod2k3" width="100%">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=byjeetrathod2k3&bg_color=0D1728&color=8FA6BF&line=278CEB&point=55B9FF&area=true&area_color=0879C9&title_color=55B9FF&hide_border=true" alt="Contribution activity graph for byjeetrathod2k3" width="100%">
+<img src="https://raw.githubusercontent.com/byjeetrathod2k3/byjeetrathod2k3/stats/activity.svg" alt="Contribution activity graph for byjeetrathod2k3, last 12 months" width="100%">
 
 <br>
 
