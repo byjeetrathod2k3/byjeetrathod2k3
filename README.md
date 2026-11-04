@@ -19,7 +19,7 @@
 <br>
 
 <a id="about"></a>
-<img src="assets/sections/h-about.svg" alt="About" width="100%">
+<img src="assets/section/h-about.svg" alt="About" width="100%">
 
 I build business software: the databases, data pipelines and reporting layers that make operations measurable, and the applications that sit on top of them. My work starts with a bottleneck in how a business runs, then moves to a data model, an architecture and an automated flow that removes it.
 
@@ -30,7 +30,7 @@ I work as an Enterprise Solutions Advisor and Technology Consultant with [Cyprao
 <br>
 
 <a id="capabilities"></a>
-<img src="assets/sections/h-capabilities.svg" alt="Professional capabilities" width="100%">
+<img src="assets/section/h-capabilities.svg" alt="Professional capabilities" width="100%">
 
 <table>
 <tr>
@@ -78,7 +78,7 @@ Applying AI tooling to operational problems such as reporting, content and custo
 <br>
 
 <a id="cypraon"></a>
-<img src="assets/sections/h-cypraon.svg" alt="Cypraon Private Limited" width="100%">
+<img src="assets/section/h-cypraon.svg" alt="Cypraon Private Limited" width="100%">
 
 <img src="assets/branding/cypraon-association.svg" alt="Jeet Rathod, Enterprise Solutions Advisor and Technology Consultant at Cypraon Private Limited" width="100%">
 
@@ -98,14 +98,14 @@ Applying AI tooling to operational problems such as reporting, content and custo
 <br>
 
 <a id="stack"></a>
-<img src="assets/sections/h-stack.svg" alt="Tech stack" width="100%">
+<img src="assets/section/h-stack.svg" alt="Tech stack" width="100%">
 
-<img src="assets/sections/stack.svg" alt="Languages: Python, JavaScript, TypeScript, Node.js, Dart. Frameworks: NestJS, Django, Flutter. Databases: Microsoft SQL Server, MySQL, PostgreSQL, MongoDB, Supabase. Data engineering: T-SQL, SSIS, stored procedures, functions, views, CTEs, indexing, ETL, data migration, query optimization. Business intelligence: Power BI, Advanced Excel, Power Query, MIS reporting, business dashboards. Tools: Git, GitHub, Docker, Linux, VS Code, Visual Studio, Postman, Figma." width="100%">
+<img src="assets/section/stack.svg" alt="Languages: Python, JavaScript, TypeScript, Node.js, Dart. Frameworks: NestJS, Django, Flutter. Databases: Microsoft SQL Server, MySQL, PostgreSQL, MongoDB, Supabase. Data engineering: T-SQL, SSIS, stored procedures, functions, views, CTEs, indexing, ETL, data migration, query optimization. Business intelligence: Power BI, Advanced Excel, Power Query, MIS reporting, business dashboards. Tools: Git, GitHub, Docker, Linux, VS Code, Visual Studio, Postman, Figma." width="100%">
 
 <br>
 
 <a id="projects"></a>
-<img src="assets/sections/h-projects.svg" alt="Selected projects" width="100%">
+<img src="assets/section/h-projects.svg" alt="Selected projects" width="100%">
 
 These are product initiatives I am developing. Repository and demo links will be added here as each one is published.
 
@@ -149,9 +149,9 @@ These are product initiatives I am developing. Repository and demo links will be
 <br>
 
 <a id="engineering"></a>
-<img src="assets/sections/h-engineering.svg" alt="Engineering philosophy" width="100%">
+<img src="assets/section/h-engineering.svg" alt="Engineering philosophy" width="100%">
 
-<img src="assets/sections/workflow.svg" alt="Engineering workflow: diagnose the bottleneck, model the data, architect the system, build and integrate, report and refine." width="100%">
+<img src="assets/section/workflow.svg" alt="Engineering workflow: diagnose the bottleneck, model the data, architect the system, build and integrate, report and refine." width="100%">
 
 | Principle | How I apply it |
 |:--|:--|
@@ -166,7 +166,7 @@ These are product initiatives I am developing. Repository and demo links will be
 <br>
 
 <a id="analytics"></a>
-<img src="assets/sections/h-analytics.svg" alt="GitHub analytics" width="100%">
+<img src="assets/section/h-analytics.svg" alt="GitHub analytics" width="100%">
 
 <table>
 <tr>
@@ -186,7 +186,7 @@ These are product initiatives I am developing. Repository and demo links will be
 <br>
 
 <a id="snake"></a>
-<img src="assets/sections/h-snake.svg" alt="Contribution activity" width="100%">
+<img src="assets/section/h-snake.svg" alt="Contribution activity" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/byjeetrathod2k3/byjeetrathod2k3/output/github-contribution-grid-snake-dark.svg">
@@ -197,7 +197,7 @@ These are product initiatives I am developing. Repository and demo links will be
 <br>
 
 <a id="focus"></a>
-<img src="assets/sections/h-focus.svg" alt="Current focus" width="100%">
+<img src="assets/section/h-focus.svg" alt="Current focus" width="100%">
 
 - Building **ABIOS**, **Hubly.ai** and **TownTap** as product initiatives
 - Data engineering and business intelligence for enterprise reporting
@@ -209,7 +209,7 @@ These are product initiatives I am developing. Repository and demo links will be
 <br>
 
 <a id="connect"></a>
-<img src="assets/sections/h-connect.svg" alt="Connect" width="100%">
+<img src="assets/section/h-connect.svg" alt="Connect" width="100%">
 
 | | |
 |:--|:--|
