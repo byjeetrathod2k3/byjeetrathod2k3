@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 250" width="860" height="250" role="img" aria-labelledby="t d">
+<title id="t">Jeet Rathod and Cypraon Private Limited</title>
+<desc id="d">Typographic diagram: Jeet Rathod's personal engineering identity connected by a professional association to Cypraon Private Limited. No company logo is used.</desc>
+<defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#55B9FF" stroke-opacity=".06"/></pattern><linearGradient id="cs" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0879C9" stop-opacity="0"/><stop offset=".5" stop-color="#55B9FF"/><stop offset="1" stop-color="#0879C9" stop-opacity="0"/><animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="6s" begin="0s" repeatCount="indefinite"/></linearGradient><linearGradient id="bgc" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#080D19"/><stop offset="1" stop-color="#0D1728"/></linearGradient></defs>
+<rect width="860" height="250" rx="4" fill="url(#bgc)"/>
+<rect width="860" height="250" rx="4" fill="url(#grid)"/>
+<g font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="12" letter-spacing="2" fill="#8FA6BF">
+  <text x="48" y="52">PERSONAL IDENTITY</text><text x="812" y="52" text-anchor="end">PROFESSIONAL ASSOCIATION</text></g>
+<text x="48" y="104" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" fill="#E6EEF8">Jeet Rathod</text>
+<text x="812" y="104" text-anchor="end" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="38" font-weight="700" fill="#E6EEF8">Cypraon Private Limited</text>
+<text x="48" y="134" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#8FA6BF">Software developer, engineering-led</text>
+<text x="812" y="134" text-anchor="end" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#8FA6BF">Enterprise technology and advisory</text>
+<line x1="48" y1="176" x2="812" y2="176" stroke="#278CEB" stroke-opacity=".35"/>
+<line x1="48" y1="176" x2="812" y2="176" stroke="url(#cs)" stroke-width="2"/>
+<circle cx="48" cy="176" r="5" fill="#080D19" stroke="#55B9FF" stroke-width="1.5"/>
+<circle cx="812" cy="176" r="5" fill="#080D19" stroke="#55B9FF" stroke-width="1.5"/>
+<circle r="3.5" fill="#55B9FF"><animateMotion dur="5s" repeatCount="indefinite" path="M48 176 H812"/></circle>
+<rect x="234.0" y="160" width="392" height="32" rx="3" fill="#0D1728" stroke="#278CEB" stroke-opacity=".5"/>
+<text x="430.0" y="181" text-anchor="middle" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#E6EEF8">Enterprise Solutions Advisor &amp; Technology Consultant</text>
+<text x="48" y="222" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="12" fill="#55B9FF">github.com/byjeetrathod2k3</text>
+<text x="812" y="222" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="12" fill="#55B9FF">cypraon.com</text>
+</svg>
