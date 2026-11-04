@@ -1,0 +1,66 @@
+# Generates the GitHub stats cards and publishes them to the `stats` branch.
+#
+# Output files (referenced by README.md):
+#   stats:stats-overview.svg, stats:languages.svg, stats:streak.svg, stats:activity.svg
+#
+# Troubleshooting
+#   - Push rejected (403): Settings > Actions > General > Workflow permissions
+#     must allow "Read and write permissions".
+#   - README images are broken: run this workflow once manually (Actions tab >
+#     "Generate GitHub stats cards" > Run workflow) and confirm the `stats`
+#     branch contains the four SVG files.
+#   - "GraphQL error" in the log: re-run once; if it persists, the message
+#     in the log names the cause.
+#   - Numbers cover public contributions only, for the last 12 months.
+name: Generate GitHub stats cards
+
+on:
+  schedule:
+    - cron: "41 */6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/stats.yml"
+      - ".github/scripts/profile_stats.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build stats cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+          OUT_DIR: dist
+        run: python3 .github/scripts/profile_stats.py
+
+      - name: Check outputs exist
+        run: |
+          for f in stats-overview languages streak activity; do
+            test -s "dist/$f.svg"
+          done
+
+      - name: Publish to stats branch
+        working-directory: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git init -b stats
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update stats cards"
+          git remote add origin "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git push --force origin stats
