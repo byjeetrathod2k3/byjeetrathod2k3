@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 236" width="430" height="236" role="img" aria-labelledby="t d">
+<title id="t">GitHub statistics</title>
+<desc id="d">Contributions, last 12 months: 38; Commits: 37; Pull requests: 0; Issues: 0; Public repositories: 6; Stars earned: 0; Followers: 0</desc>
+<rect width="430" height="236" rx="6" fill="#0D1728" stroke="#102A46"/>
+<rect x="0" y="0" width="4" height="236" rx="2" fill="#278CEB"/>
+<text x="28" y="38" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="17" font-weight="600" fill="#55B9FF">GitHub statistics</text>
+<text x="28" y="74" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8FA6BF">Contributions, last 12 months</text><text x="402" y="74" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#E6EEF8">38</text>
+<text x="28" y="99" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8FA6BF">Commits</text><text x="402" y="99" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#E6EEF8">37</text>
+<text x="28" y="124" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8FA6BF">Pull requests</text><text x="402" y="124" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#E6EEF8">0</text>
+<text x="28" y="149" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8FA6BF">Issues</text><text x="402" y="149" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#E6EEF8">0</text>
+<text x="28" y="174" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8FA6BF">Public repositories</text><text x="402" y="174" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#E6EEF8">6</text>
+<text x="28" y="199" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8FA6BF">Stars earned</text><text x="402" y="199" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#E6EEF8">0</text>
+<text x="28" y="224" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#8FA6BF">Followers</text><text x="402" y="224" text-anchor="end" font-family="'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',monospace" font-size="14" font-weight="700" fill="#E6EEF8">0</text>
+</svg>
