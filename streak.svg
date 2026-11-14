@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 150" width="860" height="150" role="img" aria-labelledby="t d">
+<title id="t">Contribution streak</title>
+<desc id="d">Current streak 0 days. Total contributions 38 in the last 12 months. Longest streak in that period 1 days.</desc>
+<rect width="860" height="150" rx="6" fill="#0D1728" stroke="#102A46"/>
+<rect x="0" y="0" width="4" height="150" rx="2" fill="#278CEB"/>
+<text x="143" y="70" text-anchor="middle" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#E6EEF8">0</text><text x="143" y="96" text-anchor="middle" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#55B9FF">Current streak (days)</text><text x="143" y="118" text-anchor="middle" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8FA6BF">No active streak</text>
+<text x="430" y="70" text-anchor="middle" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#E6EEF8">38</text><text x="430" y="96" text-anchor="middle" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#55B9FF">Contributions, last 12 months</text><text x="430" y="118" text-anchor="middle" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8FA6BF">Nov 9, 2025 - Nov 14, 2026</text>
+<line x1="287" y1="28" x2="287" y2="122" stroke="#102A46"/>
+<text x="717" y="70" text-anchor="middle" font-family="'Space Grotesk','Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#E6EEF8">1</text><text x="717" y="96" text-anchor="middle" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="13" font-weight="600" fill="#55B9FF">Longest streak (days), last 12 months</text><text x="717" y="118" text-anchor="middle" font-family="'Inter','Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8FA6BF">Nov 4, 2026 - Nov 4, 2026</text>
+<line x1="573" y1="28" x2="573" y2="122" stroke="#102A46"/>
+</svg>
